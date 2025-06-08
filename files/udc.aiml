@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <!-- Greeting and Introduction -->
+    <category>
+        <pattern>HI</pattern>
+        <template>Hello There! I'm C.A.R.E.E.R.BOT! That stands for Creating Actionable and Realistic Employment Election Rosters (good thing there's acronyms, right?). I’ll help you find roles that match your skills and interests. What programming languages do you know? (e.g., Python, Java, JavaScript)</template>
+    </category>
+    <category>
+        <pattern>HELLO</pattern>
+        <template><srai>HI</srai></template>
+    </category>
+    
+    <!-- Skill Assessment: Programming Languages -->
+    <category>
+        <pattern>I KNOW PYTHON</pattern>
+        <template>
+            <think><set name="skill">Python</set></think>
+            Awesome! That Python is so hot right now. Are you interested in building applications, data analysis, or machine learning? 
+        </template>
+    </category>
+    <category>
+        <pattern>PYTHON</pattern>
+        <template><srai>I KNOW PYTHON</srai></template>
+    </category>
+    <category>
+        <pattern>I KNOW JAVA</pattern>
+        <template>
+            <think><set name="skill">Java</set></think>
+            Sweet! Java is everywhere! Do you prefer building applications or working on system programming?
+        </template>
+    </category>
+    <category>
+        <pattern>JAVA</pattern>
+        <template><srai>I KNOW JAVA</srai></template>
+    </category>
+    <category>
+        <pattern>I KNOW JAVASCRIPT</pattern>
+        <template>
+            <think><set name="skill">JavaScript</set></think>
+            That's great! JavaScript is key for web development. Are you more interested in front-end design or full-stack development?
+        </template>
+    </category>
+    <category>
+        <pattern>JAVASCRIPT</pattern>
+        <template><srai>I KNOW JAVASCRIPT</srai></template>
+    </category>
+    <category>
+        <pattern>I KNOW C PLUS PLUS</pattern>
+        <template>
+            <think><set name="skill">C++</set></think>
+            Nice! C++ is pretty powerful! Are you interested in cybersecurity or system programming? 
+        </template>
+    </category>
+    <category>
+        <pattern>C PLUS PLUS</pattern>
+        <template><srai>I KNOW C PLUS PLUS</srai></template>
+    </category>
+    <category>
+        <pattern>CPP</pattern>
+        <template><srai>I KNOW C PLUS PLUS</srai></template>
+    </category>
+    <category>
+        <pattern>I KNOW *</pattern>
+        <template>
+            <think><set name="skill"><star/></set></think>
+            Cool, you know <star/>. What kind of work excites you? For example. data analysis, web design, or security?
+        </template>
+    </category>
+    
+    <!-- Preference Assessment and Job Recommendations -->
+    <!-- Software Developer -->
+    <category>
+        <pattern>BUILDING APPLICATIONS</pattern>
+        <template>
+            <think><set name="last_job">Software Developer</set></think>
+            A **Software Developer** role suits your interest in building applications. You’d write code to create software using languages like <get name="skill"/>. Want more details?
+        </template>
+    </category>
+    <category>
+        <pattern>* BUILDING APPLICATIONS *</pattern>
+        <template><srai>BUILDING APPLICATIONS</srai></template>
+    </category>
+    <category>
+        <pattern>APPLICATIONS</pattern>
+        <template><srai>BUILDING APPLICATIONS</srai></template>
+    </category>
+    <category>
+        <pattern>I LIKE APPLICATIONS</pattern>
+        <template><srai>BUILDING APPLICATIONS</srai></template>
+    </category>
+    <category>
+        <pattern>SOFTWARE DEVELOPER</pattern>
+        <template><srai>* SOFTWARE DEVELOPER *</srai></template>
+    </category>
+    
+    <!-- Data Scientist -->
+    <category>
+        <pattern>DATA ANALYSIS</pattern>
+        <template>
+            <think><set name="last_job">Data Scientist</set></think>
+            A **Data Scientist** role is perfect for your interest in data analysis. You’d analyze data using tools like <get name="skill"/> or SQL. More info?
+        </template>
+    </category>
+    <category>
+        <pattern>* DATA ANALYSIS *</pattern>
+        <template><srai>DATA ANALYSIS</srai></template>
+    </category>
+    <category>
+        <pattern>DATA</pattern>
+        <template><srai>DATA ANALYSIS</srai></template>
+    </category>
+    <category>
+        <pattern>I LIKE DATA</pattern>
+        <template><srai>DATA ANALYSIS</srai></template>
+    </category>
+    <category>
+        <pattern>DATA SCIENTIST</pattern>
+        <template><srai>* DATA SCIENTIST *</srai></template>
+    </category>
+    
+    <!-- Web Developer -->
+    <category>
+        <pattern>WEB DESIGN</pattern>
+        <template>
+            <think><set name="last_job">Web Developer</set></think>
+            A **Web Developer** role suits your interest in web design. You’d build websites using <get name="skill"/> or languages like HTML and CSS. Details?
+        </template>
+    </category>
+    <category>
+        <pattern>FRONT END</pattern>
+        <template><srai>WEB DESIGN</srai></template>
+    </category>
+    <category>
+        <pattern>FULL STACK</pattern>
+        <template><srai>WEB DESIGN</srai></template>
+    </category>
+    <category>
+        <pattern>* WEB DESIGN *</pattern>
+        <template><srai>WEB DESIGN</srai></template>
+    </category>
+    <category>
+        <pattern>I LIKE WEB DESIGN</pattern>
+        <template><srai>WEB DESIGN</srai></template>
+    </category>
+    <category>
+        <pattern>WEB DEVELOPER</pattern>
+        <template><srai>* WEB DEVELOPER *</srai></template>
+    </category>
+    
+    <!-- Cybersecurity Analyst -->
+    <category>
+        <pattern>SECURITY</pattern>
+        <template>
+            <think><set name="last_job">Cybersecurity Analyst</set></think>
+            A **Cybersecurity Analyst** role is great for your interest in security. You’d protect systems using skills in <get name="skill"/> or networking. More details?
+        </template>
+    </category>
+    <category>
+        <pattern>CYBERSECURITY</pattern>
+        <template><srai>SECURITY</srai></template>
+    </category>
+    <category>
+        <pattern>SYSTEM PROGRAMMING</pattern>
+        <template><srai>SECURITY</srai></template>
+    </category>
+    <category>
+        <pattern>* SECURITY *</pattern>
+        <template><srai>SECURITY</srai></template>
+    </category>
+    <category>
+        <pattern>CYBERSECURITY ANALYST</pattern>
+        <template><srai>* CYBERSECURITY ANALYST *</srai></template>
+    </category>
+    
+    <!-- Machine Learning Engineer -->
+    <category>
+        <pattern>MACHINE LEARNING</pattern>
+        <template>
+            <think><set name="last_job">Machine Learning Engineer</set></think>
+            A **Machine Learning Engineer** role fits your interest in machine learning. You’d build AI models using <get name="skill"/> or frameworks like TensorFlow or PyTorch. Want details?
+        </template>
+    </category>
+    <category>
+        <pattern>I LIKE MACHINE LEARNING</pattern>
+        <template><srai>MACHINE LEARNING</srai></template>
+    </category>
+    <category>
+        <pattern>ML</pattern>
+        <template><srai>MACHINE LEARNING</srai></template>
+    </category>
+    <category>
+        <pattern>AI</pattern>
+        <template><srai>MACHINE LEARNING</srai></template>
+    </category>
+    <category>
+        <pattern>* MACHINE LEARNING *</pattern>
+        <template><srai>MACHINE LEARNING</srai></template>
+    </category>
+    <category>
+        <pattern>I LIKE ML</pattern>
+        <template><srai>MACHINE LEARNING</srai></template>
+    </category>
+    <category>
+        <pattern>I LIKE AI</pattern>
+        <template><srai>MACHINE LEARNING</srai></template>
+    </category>
+    <category>
+        <pattern>MACHINE LEARNING ENGINEER</pattern>
+        <template><srai>* MACHINE LEARNING ENGINEER *</srai></template>
+    </category>
+    
+    <!-- Debug Last Job -->
+    <category>
+        <pattern>CHECK JOB</pattern>
+        <template>The last recommended job was: <get name="last_job"/> Try saying "MORE DETAILS" to learn more.</template>
+    </category>
+    
+    <!-- Job Details -->
+    <category>
+        <pattern>MORE DETAILS</pattern>
+        <template>
+            <think><set name="last_job_value"><get name="last_job"/></set></think>
+            <think><set name="awaiting_resource_response">true</set></think>
+            <condition name="last_job_value">
+                <li value="Software Developer">
+                    Software Developers earn $70,000–$120,000 annually, coding applications in industries like tech or finance. Skills needed: Java, Python, problem-solving. For resources, enter "Resources."
+                </li>
+                <li value="Data Scientist">
+                   Data Scientists earn $80,000–$130,000, analyzing data for insights in tech or healthcare. Skills: Python, SQL, statistics. For resources, enter "Resources."
+                </li>
+                <li value="Web Developer">
+                    Web Developers earn $60,000–$100,000, building websites for businesses. Skills: HTML, CSS, JavaScript. For resources, enter "Resources."
+                </li>
+                <li value="Cybersecurity Analyst">
+                     Cybersecurity Analysts earn $70,000–$110,000, securing networks in various sectors. Skills: networking, security protocols. For resources, enter "Resources."
+                </li>
+                <li value="Machine Learning Engineer">
+                    Machine Learning Engineers earn $90,000–$150,000, creating AI models for tech firms. Skills: Python, TensorFlow. For resources, enter "Resources."
+                </li>
+                <li>I'm not sure which job you're asking about (last job: <get name="last_job"/>). Please specify a job or try a preference like "machine learning."</li>
+            </condition>
+        </template>
+    </category>
+    
+    <!-- Merged Yes Handling -->
+    <category>
+        <pattern>YES</pattern>
+        <template><srai>MORE DETAILS</srai></template>
+    </category>
+    
+    <!-- Store Last Recommended Job -->
+    <category>
+        <pattern>* SOFTWARE DEVELOPER *</pattern>
+        <template>
+            <think><set name="last_job">Software Developer</set></think>
+            <srai>MORE DETAILS</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* DATA SCIENTIST *</pattern>
+        <template>
+            <think><set name="last_job">Data Scientist</set></think>
+            <srai>MORE DETAILS</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* WEB DEVELOPER *</pattern>
+        <template>
+            <think><set name="last_job">Web Developer</set></think>
+            <srai>MORE DETAILS</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* CYBERSECURITY ANALYST *</pattern>
+        <template>
+            <think><set name="last_job">Cybersecurity Analyst</set></think>
+            <srai>MORE DETAILS</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* MACHINE LEARNING ENGINEER *</pattern>
+        <template>
+            <think><set name="last_job">Machine Learning Engineer</set></think>
+            <srai>MORE DETAILS</srai>
+        </template>
+    </category>
+    
+    <!-- Resources -->
+    <category>
+        <pattern>RESOURCES</pattern>
+        <template>
+            <think><set name="awaiting_resource_response">false</set></think>
+            Check out online platforms like Coursera or Udemy for courses on your recommended job’s skills. Also, visit Indeed.com for job listings. If you want to explore other career options, enter another field you are interested in or another skill you have.
+        </template>
+    </category>
+    <category>
+        <pattern>NEED RESOURCES</pattern>
+        <template><srai>RESOURCES</srai></template>
+    </category>
+    <category>
+        <pattern>I NEED RESOURCES</pattern>
+        <template><srai>RESOURCES</srai></template>
+    </category>
+    <category>
+        <pattern>SURE</pattern>
+        <template><srai>RESOURCES</srai></template>
+    </category>
+    <category>
+        <pattern>PLEASE</pattern>
+        <condition name="awaiting_resource_response" value="true">
+            <think><set name="awaiting_resource_response">false</set></think>
+            Check out online platforms like Coursera or Udemy for courses on your recommended job’s skills. Also, visit Indeed.com for job listings. If you want to explore other career options, enter another field you are interested in or another skill you have.
+        </condition>
+    </category>
+    <category>
+        <pattern>OKAY</pattern>
+        <condition name="awaiting_resource_response" value="true">
+            <think><set name="awaiting_resource_response">false</set></think>
+            Check out online platforms like Coursera or Udemy for courses on your recommended job’s skills. Also, visit Indeed.com for job listings. If you want to explore other career options, enter another field you are interested in or another skill you have.
+        </condition>
+    </category>
+    <category>
+        <pattern>YEAH</pattern>
+        <condition name="awaiting_resource_response" value="true">
+            <think><set name="awaiting_resource_response">false</set></think>
+            Check out online platforms like Coursera or Udemy for courses on your recommended job’s skills. Also, visit Indeed.com for job listings. If you want to explore other career options, enter another field you are interested in or another skill you have.
+        </condition>
+    </category>
+    <category>
+        <pattern>TELL ME MORE</pattern>
+        <condition name="awaiting_resource_response" value="true">
+            <think><set name="awaiting_resource_response">false</set></think>
+            Check out online platforms like Coursera or Udemy for courses on your recommended job’s skills. Also, visit Indeed.com for job listings. If you want to explore other career options, enter another field you are interested in or another skill you have.
+        </condition>
+    </category>
+
+<!-- Default -->
+  <category>
+    <pattern>*</pattern>
+    <template>Woops, you got me there - I don't know how to respond to that. While I think about what I did wrong, can you tell more interests or skills you have? Something like, "I Know Python."</template>
+  </category>
+  
+</aiml>
